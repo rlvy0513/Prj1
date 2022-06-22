@@ -1,5 +1,18 @@
 package notice.controller.joinus;
 
-public class LogoutProcController {
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import notice.controller.Controller;
+
+public class LogoutProcController implements Controller {
+
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		System.out.println("LogoutProcController pass");
+		
+		request.getSession().invalidate();
+		response.sendRedirect("../customer/notice.do");
+	}
 
 }
