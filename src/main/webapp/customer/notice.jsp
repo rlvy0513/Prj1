@@ -19,6 +19,12 @@ function clearVal() {
 	inputval.value="";//클릭하면 입력값 초기화
 }
 </script>
+<c:if test="${empty sessionScope.uid }">
+	<a href="../login/login.do">login</a>
+	<a href="#">join</a>
+</c:if>
+
+
 <form action="notice.do" method="get">
 	<select name="f">
 		<option ${param.f=="title"?"selected":"" } value="title">제목</option>
