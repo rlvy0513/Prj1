@@ -12,5 +12,6 @@ request.setCharacterEncoding("utf-8");
 <body>
 <h3>index</h3>
 <a href="customer/notice.do">customer</a>
+<a href="login/login.do">login</a>
 </body>
 </html>

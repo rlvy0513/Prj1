@@ -24,9 +24,6 @@ function clearVal() {
 	<a href="#">join</a>
 </c:if>
 
-<<<<<<< HEAD
-
-=======
 <c:if test="${not empty sessionScope.uid }">
 	<a href="../login/logoutproc.do">logout</a>
 </c:if>
@@ -34,7 +31,6 @@ function clearVal() {
 <br />
 ${sessionScope.uid } 님 반갑습니다.
 <hr />
->>>>>>> jbrh
 <form action="notice.do" method="get">
 	<select name="f">
 		<option ${param.f=="title"?"selected":"" } value="title">제목</option>
@@ -65,8 +61,10 @@ ${sessionScope.uid } 님 반갑습니다.
 
 	
 </table>
+<c:if test="${not empty sessionScope.uid }">
 <a href="noticeReg.jsp">작성</a>
 <a href="notice.do">목록</a>
+</c:if>
 </body>
 </html>
 
