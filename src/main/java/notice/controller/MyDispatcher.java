@@ -53,7 +53,7 @@ public class MyDispatcher extends HttpServlet{
 				controller=new NoticeDelProcController();
 			}else if(com.equals("/customer/notice.do")) {
 				controller=new NoticeController();
-			}else if(com.equals("login/login.do")) {
+			}else if(com.equals("/login/login.do")) {
 				controller=new LoginController();
 			}else if(com.equals("/login/loginproc.do")) {
 				controller=new LoginProcController();

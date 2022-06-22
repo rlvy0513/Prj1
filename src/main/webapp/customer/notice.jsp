@@ -19,6 +19,7 @@ function clearVal() {
 	inputval.value="";//클릭하면 입력값 초기화
 }
 </script>
+<!-- 세션을 이용한 조건문 -->
 <c:if test="${empty sessionScope.uid }">
 	<a href="../login/login.do">login</a>
 	<a href="#">join</a>
@@ -37,7 +38,7 @@ ${sessionScope.uid } 님 반갑습니다.
 		<option ${param.f=="content"?"selected":"" } value="content">내용</option>
 		<!-- selected="selected" 첫 화면 선택되도록 하는 코드-->
 	</select>
-	<input type="text" id="q" name="q" value="${query }" onclick="clearVal()" />
+	<input type="text" id="q" name="q" value="${query }" onclick="clearVal();" />
 	<input type="submit" value="검색" />
 </form>
 <table width="500" border="1">
